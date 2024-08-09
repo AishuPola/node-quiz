@@ -1,6 +1,6 @@
 import express from "express";
 const router = express.Router();
-actualanswers = [
+actualanswers: [] = [
   {
     id: "1",
     answer: [2],

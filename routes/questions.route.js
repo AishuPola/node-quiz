@@ -1,7 +1,7 @@
 import express from "express";
 import { v4 as uuidv4 } from "uuid"; // Named Import
 const router = express.Router();
-questions = [
+questions: [] = [
   {
     id: "1",
     question: "What is the capital of France?",
