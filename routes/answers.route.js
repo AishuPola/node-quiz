@@ -1,6 +1,6 @@
 import express from "express";
 const router = express.Router();
-actualanswers: [] = [
+let actualanswers = [
   {
     id: "1",
     answer: [2],
@@ -85,8 +85,8 @@ router.post("/", function (request, response) {
     );
 
     const isCorrect =
-      JSON.stringify(userSelectedOptions) ===
-      JSON.stringify(question.correctOptions);
+      JSON.stringify(userSelectedOptions).sort() ===
+      JSON.stringify(question.correctOptions).sort();
     if (isCorrect) {
       totalScore++;
     }
